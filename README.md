@@ -5,6 +5,11 @@ This playbook is designed to integrate Microsoft Sentinel with Azure OpenAI.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fml58158%2FAzureOpenAI-Playbook%2Fmain%2Fazuredeploy.json)
 
+Requirements:
+
+1. Azure OpenAI (Deployed from Azure subscription)
+2. Microsoft Sentinel SIEM Solution
+
 In order to use it, you will need to change the following variables:
 
 <b>Azure OpenAI API Key:</b> Your Azure OpenAI API Key<br>
