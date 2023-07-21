@@ -15,7 +15,7 @@ In order to use it, you will need to change the following variables:
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/83e6b402-f5a4-4eef-9c46-8771ec25b170) <br>
 (Example: https://myopenai.openai.azure.com/openai/deployments/Chat-GPT/chat/completions?api-version=2023-03-15-preview")
 
-You need to replace the myopenai variable with yours. 
+You need to replace the <myopenai> variable with your endpoint. 
 
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/ee7f7cf0-4b97-42b4-8d46-1dc2ee04a371)
 
