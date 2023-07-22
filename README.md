@@ -10,6 +10,8 @@ Requirements:
 1. Azure OpenAI (Deployed from Azure subscription)
 2. Microsoft Sentinel SIEM Solution
 
+(If you need Azure OpenAI, please follow the directions on the Setup page.)
+
 In order to use it, you will need to change the following variables:
 
 <b>Azure OpenAI API Key:</b> Your Azure OpenAI API Key<br>
