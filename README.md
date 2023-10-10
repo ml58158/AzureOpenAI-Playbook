@@ -26,8 +26,17 @@ You need to replace the <myopenai> variable with your endpoint.
 
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/ee7f7cf0-4b97-42b4-8d46-1dc2ee04a371)
 
-Next, You will need to insert your Azure OpenAI Deployment name into the 3 Webhook URIs. <br>
+Next, You will need to insert your Azure OpenAI Deployment name into the Azure OpenAI Deployment URI variable. <br>
+This will include 2 different pieces that will need to be filled in: <br>
+1.  Your endpoint URI, which is found in the Keys and Endpoints section of your deployment in Azure OpenAI. <br> 
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/668e1a4d-2c8c-4666-9b4e-22a39ff77401) <br>
+2. Your model deployment name, which is found in the deployments section of Azure AI Studio. <br>
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/ee3e26c2-52f8-4d17-9b0c-695cb4bca1a6) <br>
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/af580083-d972-438f-aea3-785979e5b687)<br>
+
+
+
 *You can find this in URI when you create your model deployment in Azure Open AI Studio.* <br>
-![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/b5f07191-2fae-4f28-8a6c-7fe3a5240981)
-                            
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/13d9dab2-3dd0-4646-99a4-f9b53f298b67)
+
 
