@@ -1,14 +1,14 @@
 # AzureOpenAI-Playbook
 Azure OpenAI Playbook created for Microsoft Sentinel
 
-This playbook is designed to integrate Microsoft Sentinel with Azure OpenAI.
+This playbook is designed to integrate Microsoft Sentinel with Azure OpenAI and is a work in progress.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fml58158%2FAzureOpenAI-Playbook%2Fmain%2Fazuredeploy.json)
 
 Requirements:
 
 1. Azure OpenAI (Deployed from Azure subscription)
-2. Microsoft Sentinel SIEM Solution
+2. Microsoft Sentinel SIEM Solution (Deployed from Azure subscription as well)
 
 (If you need Azure OpenAI, please follow the directions on the Setup page.)
 
@@ -17,26 +17,16 @@ In order to use it, you will need to change the following variables:
 <b>Azure OpenAI API Key:</b> Your Azure OpenAI API Key<br>
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/284542ec-2e90-4f40-b9bd-db67f4a8181c)
 
-
-<b>Azure OpenAPI URL Endpoint:</b> This is your deployment link for Azure OpenAI.<br>
+<b>Azure OpenAPI URI Endpoint:</b> This is your deployment link for Azure OpenAI.<br>
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/83e6b402-f5a4-4eef-9c46-8771ec25b170) <br>
-(Example: https://myopenai.openai.azure.com/openai/deployments/Chat-GPT/chat/completions?api-version=2023-03-15-preview")
+(Example: https://<myopenai>.openai.azure.com/openai/deployments/<deploymentname>/chat/completions?api-version=2023-03-15-preview")
 
-You need to replace the <myopenai> variable with your endpoint. 
+You need to replace the <myopenai> variable with your endpoint and <deploymentname> with your model deployment name.
 
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/ee7f7cf0-4b97-42b4-8d46-1dc2ee04a371)
 
-Next, You will need to insert your Azure OpenAI Deployment name into the Azure OpenAI Deployment URI variable. <br>
-This will include 2 different pieces that will need to be filled in: <br>
-1.  Your endpoint URI, which is found in the Keys and Endpoints section of your deployment in Azure OpenAI. <br> 
-![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/668e1a4d-2c8c-4666-9b4e-22a39ff77401) <br>
-2. Your model deployment name, which is found in the deployments section of Azure AI Studio. <br>
-![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/ee3e26c2-52f8-4d17-9b0c-695cb4bca1a6) <br>
-![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/af580083-d972-438f-aea3-785979e5b687)<br>
-
-
-
-*You can find this in URI when you create your model deployment in Azure Open AI Studio.* <br>
-![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/13d9dab2-3dd0-4646-99a4-f9b53f298b67)
-
+To find these pieces of information, please see below:<br>
+1. API Key and Endpoint URI<br>
+*This is found in the Keys and Endpoint section on your Azure OpenAI deployment. <br>
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/a42db8e4-f9fe-4037-bb5c-cee6ba57a42c) <br>
 
