@@ -27,6 +27,9 @@ You need to replace the <myopenai> variable with your endpoint and <deploymentna
 
 To find these pieces of information, please see below:<br>
 1. API Key and Endpoint URI<br>
-*This is found in the Keys and Endpoint section on your Azure OpenAI deployment. <br>
+*This is found in the Keys and Endpoint section on your Azure OpenAI deployment.* <br>
 ![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/a42db8e4-f9fe-4037-bb5c-cee6ba57a42c) <br>
 
+2. Deployment Name <br>
+* This is found inside Azure AI Studio when you setup your deployment.* <br>
+![image](https://github.com/ml58158/AzureOpenAI-Playbook/assets/11156002/2c915ffe-4a23-4731-be96-bcd87315a36c)
