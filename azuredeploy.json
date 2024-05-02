@@ -81,7 +81,7 @@
                                     {
                                         "name":  "api-key",
                                         "type":  "string",
-                                        "value":  "\u003cAPIKEY\u003e"
+                                        "value":  "<AOAI-API Key>"
                                     }
                                 ]
                             }
@@ -172,7 +172,7 @@
                                     {
                                         "name":  "Azure OpenAI Deployment URI",
                                         "type":  "string",
-                                        "value":  "https://\u003cOpen AI Deployment\u003e.openai.azure.com/openai/deployments/\u003cYour deployment name\u003e/chat/completions?api-version=2023-03-15-preview"
+                                        "value":  "https://<AOAI-URI>.openai.azure.com/openai/deployments/rmcs2/chat/completions?api-version=2023-07-01-preview"
                                     }
                                 ]
                             }
@@ -209,14 +209,14 @@
                         "For_Each_Parsed_MITRE_Tactic":  {
                             "foreach":  "@body('Parse_MITRE_JSON')?['choices']",
                             "actions":  {
-                                "Add_comment_to_incident_(V3)_2":  {
+                                "Add_MITRE_comment_to_incident_(V3)":  {
                                     "runAfter":  {
                                     },
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
                                             "incidentArmId":  "@triggerBody()?['object']?['id']",
-                                            "message":  "\u003cp\u003e@{items('For_Each_Parsed_MITRE_Tactic')}\u003c/p\u003e"
+                                            "message":  "\u003cp\u003e@{body('Parse_MITRE_JSON')?['choices']?[0]?['message']?['content']}\u003c/p\u003e"
                                         },
                                         "host":  {
                                             "connection":  {
@@ -267,14 +267,14 @@
                         "For_each_IM_Question":  {
                             "foreach":  "@body('Parse_IM_JSON')?['choices']",
                             "actions":  {
-                                "Add_comment_to_incident_(V3)":  {
+                                "Add_IM_comment_to_incident_(V3)":  {
                                     "runAfter":  {
                                     },
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
                                             "incidentArmId":  "@triggerBody()?['object']?['id']",
-                                            "message":  "\u003cp\u003e@{items('For_each_IM_Question')}\u003c/p\u003e"
+                                            "message":  "\u003cp\u003e@{body('Parse_IM_JSON')?['choices']?[0]?['message']?['content']}\u003c/p\u003e"
                                         },
                                         "host":  {
                                             "connection":  {
@@ -296,14 +296,14 @@
                         "For_each_KQL_Query":  {
                             "foreach":  "@body('Parse_KQL_Query_JSON')?['choices']",
                             "actions":  {
-                                "Add_comment_to_incident_(V3)_3":  {
+                                "Add_KQL_Query_comment_to_incident_(V3)":  {
                                     "runAfter":  {
                                     },
                                     "type":  "ApiConnection",
                                     "inputs":  {
                                         "body":  {
                                             "incidentArmId":  "@triggerBody()?['object']?['id']",
-                                            "message":  "\u003cp\u003e@{items('For_each_KQL_Query')?['text']}\u003c/p\u003e"
+                                            "message":  "\u003cp\u003e@{body('Parse_KQL_Query_JSON')?['choices']?[0]?['message']?['content']}\u003c/p\u003e"
                                         },
                                         "host":  {
                                             "connection":  {
@@ -332,8 +332,8 @@
                                     "inputs":  {
                                         "body":  {
                                             "incidentArmId":  "@triggerBody()?['object']?['id']",
-                                            "taskDescription":  "\u003cp\u003e@{items('For_each_Task')?['text']}\u003c/p\u003e",
-                                            "taskTitle":  "Task from Azure OpenAI"
+                                            "taskDescription":  "\u003cp\u003e@{body('Parse_Sentinel_Tasks_JSON')?['choices']?[0]?['message']?['content']}\u003c/p\u003e\n\u003cp\u003e\u003cbr\u003e\n\u003c/p\u003e",
+                                            "taskTitle":  "Created by Azure Open AI"
                                         },
                                         "host":  {
                                             "connection":  {
