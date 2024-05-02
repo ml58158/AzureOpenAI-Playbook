@@ -172,7 +172,7 @@
                                     {
                                         "name":  "Azure OpenAI Deployment URI",
                                         "type":  "string",
-                                        "value":  "https://<AOAI-URI>.openai.azure.com/openai/deployments/rmcs2/chat/completions?api-version=2023-07-01-preview"
+                                        "value":  "https://<AOAI-URI>.openai.azure.com/openai/deployments/<your deployment name>/chat/completions?api-version=2023-07-01-preview"
                                     }
                                 ]
                             }
